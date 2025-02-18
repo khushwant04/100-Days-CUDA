@@ -9,10 +9,9 @@ __global__ void vectorAdd(const float *A, const float *B, float *C, int N)
     }
 }
 
-
 int main()
 {
-    const int N = 10;
+    const int N = 1000;
     float A[N], B[N], C[N];
 
     float *d_a, *d_b, *d_c;
@@ -21,7 +20,7 @@ int main()
     cudaMalloc(&d_c, N * sizeof(float));
     cudaMemcpy(d_a, A, N * sizeof(float), cudaMemcpyHostToDevice);
     cudaMemcpy(d_b, B, N * sizeof(float), cudaMemcpyHostToDevice);
-    int blocksize = 256;
+    int blocksize = 512;
     int gridsize = ceil(N / blocksize);
     vectorAdd<<<gridsize, blocksize>>>(d_a, d_b, d_c, N);
     cudaMemcpy(C, d_c, N * sizeof(float), cudaMemcpyDeviceToHost);

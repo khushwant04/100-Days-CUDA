@@ -1,6 +1,6 @@
 # 100 Days Cuda Challenge
 
-## Summary Report (Past 3 Days)
+## Summary Report (Past 4 Days)
 
 - **Day 01:**
   - Implemented vector addition using CUDA.
@@ -13,3 +13,7 @@
 - **Day 03:**
   - Built a CUDA matrix multiplication example.
   - Source: [`day 03/matrixMul.cu`](day%2003/matrixMul.cu)
+
+- **Day 04:**
+  - Optimized memory management for CUDA kernels.
+  - Source: [`day 04/memoryOpt.cu`](day%2004/memoryOpt.cu)

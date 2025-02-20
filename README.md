@@ -16,4 +16,4 @@
 
 - **Day 04:**
   - Optimized memory management for CUDA kernels.
-  - Source: [`day 04/memoryOpt.cu`](day%2004/memoryOpt.cu)
+  - Source: [`day 04/softMax.cu`](day%2004/softMax.cu)
